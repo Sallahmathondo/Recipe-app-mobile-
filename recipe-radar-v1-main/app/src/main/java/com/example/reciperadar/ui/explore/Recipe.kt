@@ -6,8 +6,12 @@ package com.example.reciperadar.ui.explore
 ////    ingredient amount,
 //    var preparation_steps:String,
 //    var imageId: Int
-//)
+import androidx.room.Entity
+import androidx.room.primaryKey
+@Entity(tableName = "recipes")
 data class Recipe(
+
+    @PrimaryKey(autoGenerate = true) val id:Long = 0,
     var meal_type: String,
     var recipe_title: String,
     var number_of_people: Int,

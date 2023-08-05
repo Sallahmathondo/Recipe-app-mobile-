@@ -35,5 +35,11 @@ class RecipeActivity : AppCompatActivity() {
         rNumberPeopleServed.text = people_served.toString()
         rImage.setImageResource(image_id)
 
+
+        val RecipeDao = Database.getInstance(application).recipeDao()
+        val newRecipe = Recipe(name = "chapati", description = "Delicious chapati recipe",ingredients= "chapati , flour, salt ,water")
+        RecipeDao.insert(newRecipe)
+
+
     }
 }
